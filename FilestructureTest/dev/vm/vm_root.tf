@@ -43,7 +43,7 @@ data "terraform_remote_state" "networking"{
 }
 
 module "vm" {
-  source = "../../Modules/VM_Ubuntu_PIP"
+  source = "../../modules/modules/VM_Ubuntu_PIP"
   
   location = data.terraform_remote_state.rg.outputs.location
   resource_group_name = data.terraform_remote_state.rg.outputs.resource_group_name

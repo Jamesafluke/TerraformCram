@@ -21,7 +21,7 @@ provider "azurerm" {
 }
 
 module "rg" {
-  source   = "../../Modules/rg"
+  source   = "../../modules//modules/rg"
   location = "westus2"
   rg_name  = "rg_filestructureTest_dev"
 }

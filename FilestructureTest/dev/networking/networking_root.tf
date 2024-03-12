@@ -37,7 +37,7 @@ locals{
 
 
 module "vnet" {
-  source = "../../Modules/vnet"
+  source = "../../modules/modules/vnet"
 
   resource_group_name = data.terraform_remote_state.rg.outputs.resource_group_name
   location = data.terraform_remote_state.rg.outputs.location
@@ -46,7 +46,7 @@ module "vnet" {
 }
 
 module "snet1" {
-  source = "../../Modules/subnet"
+  source = "../../modules/modules/subnet"
 
   snet_name = "snet1"
   resource_group_name = data.terraform_remote_state.rg.outputs.resource_group_name
