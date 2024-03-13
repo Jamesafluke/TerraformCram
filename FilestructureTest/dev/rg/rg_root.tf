@@ -22,8 +22,7 @@ provider "azurerm" {
 }
 
 module "rg" {
-  # source   = "../../modules//modules/rg"
-  source = "https://github.com/Jamesafluke/TerraformCram/tree/main/FilestructureTest/modules/modules/rg"
+  source = "github.com/Jamesafluke/TerraformCram.git//FilestructureTest/modules/modules/rg"
   location = "westus2"
   rg_name  = "rg_filestructureTest_dev"
 }
