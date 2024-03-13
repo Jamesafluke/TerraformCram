@@ -38,7 +38,7 @@ locals{
 
 
 module "vnet" {
-  source = "github.com/Jamesafluke/TerraformCram.git//FilestructureTest/modules/modules/vnet"
+  source = "github.com/Jamesafluke/TerraformCram.git//FilestructureTest/modules/modules/vnet?ref=v1.01.0"
 
   resource_group_name = data.terraform_remote_state.rg.outputs.resource_group_name
   location = data.terraform_remote_state.rg.outputs.location
@@ -47,7 +47,7 @@ module "vnet" {
 }
 
 module "snet1" {
-    source = "github.com/Jamesafluke/TerraformCram.git//FilestructureTest/modules/modules/subnet"
+    source = "github.com/Jamesafluke/TerraformCram.git//FilestructureTest/modules/modules/subnet?ref=v1.01.0"
 
 
   snet_name = "snet1"
