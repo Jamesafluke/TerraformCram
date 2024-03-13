@@ -1,4 +1,5 @@
 terraform {
+  required_version = ">= 1.0.0, < 2.0.0"
   backend "azurerm" {
     resource_group_name  = "rg-tfstate"
     storage_account_name = "satfstate109234"
@@ -21,7 +22,8 @@ provider "azurerm" {
 }
 
 module "rg" {
-  source   = "../../modules//modules/rg"
+  # source   = "../../modules//modules/rg"
+  source = "https://github.com/Jamesafluke/TerraformCram/tree/main/FilestructureTest/modules/modules/rg"
   location = "westus2"
   rg_name  = "rg_filestructureTest_dev"
 }
